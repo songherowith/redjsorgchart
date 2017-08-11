@@ -1,0 +1,41 @@
+<!Doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>在JOrgChart修改添加红色线路</title>
+	<script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+	<link href="jquery.jOrgChart.css" rel="stylesheet" type="text/css" />
+	<script src="jquery.jOrgChart.js" type="text/javascript"></script>
+	<style>
+		.jOrgChart .node
+		{
+			border: 1px solid;
+			border-radius: 0px;
+			font-size: 14px;
+			color: #F38630;
+			-moz-border-radius: 8px;
+		}
+		.node p
+		{
+			font-family: tahoma;
+			font-size: 10px;
+			line-height: 11px;
+			padding: 2px;
+		}
+
+	</style>
+<head>
+<body>
+        <ul style="margin-left: 244px; display: none;" id="OrgChart">
+        </ul>
+		<div style="margin-left: 244px;" id="chart">
+        </div>
+<script>
+		node = $('#chart');
+		$("#OrgChart").html("<li><a><img src='images/PNG/采集器.gif'  style='cursor:pointer;' /></a><div class='name2' id='001'>海中松树<br/>自定义：</div><ul><li ><a alt='设备信息' isRed='true'><img  src='images/PNG/采集器.gif' style='cursor:pointer;' /></a><div class='name' id='001002'>海中松树<br/>自定义：</div></li><li ><a alt='设备信息' isRed='false'><img  src='images/PNG/采集器.gif' style='cursor:pointer;' /></a><div class='name' id='001003'>海中松树<br/>自定义：</div></li><li ><a alt='设备信息' isRed='true'><img  src='images/PNG/采集器.gif' style='cursor:pointer;' /></a><div class='name' id='001003'>海中松树<br/>自定义：</div></li><li ><a alt='设备信息' isRed='false'><img  src='images/PNG/采集器.gif' style='cursor:pointer;' /></a><div class='name' id='001003'>海中松树<br/>自定义：</div></li><li ><a alt='设备信息' isRed='true'><img  src='images/PNG/采集器.gif' style='cursor:pointer;' /></a><div class='name' id='001003'>海中松树<br/>自定义：</div></li><li ><a alt='设备信息' isRed='true'><img  src='images/PNG/采集器.gif' style='cursor:pointer;' /></a><div class='name' id='001003'>海中松树<br/>自定义：</div></li><li ><a alt='设备信息' isRed='false'><img  src='images/PNG/采集器.gif' style='cursor:pointer;' /></a><div class='name' id='001003'>海中松树<br/>自定义：</div></li><li ><a alt='设备信息' isRed='true'><img  src='images/PNG/采集器.gif' style='cursor:pointer;' /></a><div class='name' id='001003'>海中松树<br/>自定义：</div></li></ul></li>");
+		$("#OrgChart").jOrgChart({
+			chartElement: node,
+			dragAndDrop: false
+		});
+</script>	
+</body>	
